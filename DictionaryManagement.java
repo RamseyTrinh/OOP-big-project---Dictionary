@@ -1,11 +1,13 @@
+package Hoang;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+
 public class DictionaryManagement extends Dictionary {
-    public String insertFromCommandLine() throws SQLException {
+    public static String insertFromCommandLine() throws SQLException {
         Scanner nhap = new Scanner(System.in);
         System.out.println("Enter number of words you want to translate: ");
         int num = nhap.nextInt();
@@ -16,6 +18,8 @@ public class DictionaryManagement extends Dictionary {
             System.out.println("Enter your word_explain of this word_target: ");
             String wordExplain = nhap.nextLine();
         }
+        return "Successfully Inserted";
+    }
 
         /**
          * Insert from file.
@@ -38,9 +42,10 @@ public class DictionaryManagement extends Dictionary {
                 e.printStackTrace();
             }
         }
+        
 
-        return "Successfully Inserted";
+
     }
 
 
-}
+
