@@ -9,7 +9,12 @@ public class DictionaryCommandline {
     public static void dictionaryBasic() throws FileNotFoundException, SQLException {
         DictionaryManagement.insertFromCommandLine();
         Dictionary.showAllWord();
+    }
 
+    public static void dictionaryAdvanced() throws FileNotFoundException {
+        DictionaryManagement.insertFromFile();
+        Dictionary.showAllWord();
+        DictionaryManagement.dictionaryLookup();
     }
 
 }
